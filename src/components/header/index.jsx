@@ -22,6 +22,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
   const resume = get(metadata, 'resume', false);
+  const reflection = get(metadata, 'reflection', false);
 
   return (
     <div className={classes.wrapper}>
@@ -57,6 +58,13 @@ const Header = ({ metadata = {}, noBlog = false }) => {
             <li className={classes.item}>
               <a className={classes.link} href={resume}>
                 Resume
+              </a>
+            </li>
+          )}
+          {reflection && (
+            <li className={classes.item}>
+              <a className={classes.link} href={reflection}>
+                Reflection
               </a>
             </li>
           )}
